@@ -1,0 +1,6 @@
+{
+  "name": "Suite Tecnológica para Stands Interactivos",
+  "description": "Suite interactiva para stands de exhibición: Malla Holográfica DIY a escala real, Póster Interactivo con WebAR y Control Gestual por Visión con Pulsera Neón.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
