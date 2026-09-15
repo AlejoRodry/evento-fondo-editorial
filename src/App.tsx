@@ -47,13 +47,13 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 space-y-6 md:space-y-10 overflow-hidden">
         {/* Quick Section Cards Banner */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-4 md:gap-6 pb-4 md:pb-0">
           <button
             id="quick-nav-gesture"
             onClick={() => setActiveTab('gesture')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
+            className={`flex-none w-[280px] md:w-auto snap-center p-4 md:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
               activeTab === 'gesture'
                 ? 'bg-gradient-to-br from-emerald-950/70 to-neutral-900 border-emerald-500/80 shadow-lg shadow-emerald-950/40'
                 : 'bg-neutral-900/40 border-neutral-800/80 hover:bg-neutral-900/80 hover:border-neutral-700'
@@ -79,7 +79,7 @@ export default function App() {
           <button
             id="quick-nav-webar"
             onClick={() => setActiveTab('webar')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
+            className={`flex-none w-[280px] md:w-auto snap-center p-4 md:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
               activeTab === 'webar'
                 ? 'bg-gradient-to-br from-cyan-950/70 to-neutral-900 border-cyan-500/80 shadow-lg shadow-cyan-950/40'
                 : 'bg-neutral-900/40 border-neutral-800/80 hover:bg-neutral-900/80 hover:border-neutral-700'
@@ -105,7 +105,7 @@ export default function App() {
           <button
             id="quick-nav-hologram"
             onClick={() => setActiveTab('hologram')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
+            className={`flex-none w-[280px] md:w-auto snap-center p-4 md:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
               activeTab === 'hologram'
                 ? 'bg-gradient-to-br from-indigo-950/70 to-neutral-900 border-indigo-500/80 shadow-lg shadow-indigo-950/40'
                 : 'bg-neutral-900/40 border-neutral-800/80 hover:bg-neutral-900/80 hover:border-neutral-700'
@@ -131,7 +131,7 @@ export default function App() {
           <button
             id="quick-nav-blueprint"
             onClick={() => setActiveTab('blueprint')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
+            className={`flex-none w-[280px] md:w-auto snap-center p-4 md:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
               activeTab === 'blueprint'
                 ? 'bg-gradient-to-br from-purple-950/70 to-neutral-900 border-purple-500/80 shadow-lg shadow-purple-950/40'
                 : 'bg-neutral-900/40 border-neutral-800/80 hover:bg-neutral-900/80 hover:border-neutral-700'
@@ -163,16 +163,16 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-neutral-900 bg-neutral-950/80 mt-auto py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-2">
-          <div className="flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-400" />
+      <footer className="border-t border-neutral-900 bg-neutral-950/80 mt-auto py-5 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-xs text-neutral-400 gap-3">
+          <div className="flex items-center space-x-2 text-center sm:text-left">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 hidden sm:inline-block" />
             <span className="font-mono text-neutral-300">
-              Suite Tecnológica para Stands Feriales e Interactivos
+              Suite Tecnológica para Stands Feriales
             </span>
           </div>
-          <div className="flex items-center space-x-4 text-neutral-400">
-            <span>Tul Holo-Gauze • WebAR MindAR • Visión Neón HSV</span>
+          <div className="flex items-center space-x-4 text-neutral-400 text-center sm:text-right">
+            <span>Holo-Gauze • WebAR • Visión Neón</span>
           </div>
         </div>
       </footer>
