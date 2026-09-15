@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col selection:bg-cyan-500 selection:text-black">
+    <div className="min-h-screen w-full overflow-x-hidden bg-neutral-950 text-neutral-100 flex flex-col selection:bg-cyan-500 selection:text-black">
       {/* Top Navigation */}
       <Navigation
         activeTab={activeTab}
@@ -47,9 +47,9 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 space-y-6 md:space-y-10 overflow-hidden">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 space-y-6 md:space-y-10">
         {/* Quick Section Cards Banner */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-4 md:gap-6 pb-4 md:pb-0">
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-4 md:gap-6 pb-4 md:pb-0 w-full max-w-full">
           <button
             id="quick-nav-gesture"
             onClick={() => setActiveTab('gesture')}

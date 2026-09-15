@@ -77,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           </div>
 
           {/* Center Navigation Tabs */}
-          <nav className="flex overflow-x-auto hide-scrollbar items-center space-x-2 sm:space-x-3 w-full md:w-auto pb-1 md:pb-0">
+          <nav className="flex overflow-x-auto hide-scrollbar items-center space-x-2 sm:space-x-3 w-full max-w-full md:w-auto pb-1 md:pb-0">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
