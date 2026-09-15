@@ -198,12 +198,13 @@ export const WebARPoster: React.FC = () => {
 
     // Animation Loop
     let animationId: number;
-    let clock = new THREE.Clock();
+    let timer = new THREE.Timer();
 
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      const delta = clock.getDelta();
-      const elapsed = clock.getElapsedTime();
+      timer.update();
+      const delta = timer.getDelta();
+      const elapsed = timer.getElapsed();
 
       // Rotation
       group.rotation.y += delta * 0.45;

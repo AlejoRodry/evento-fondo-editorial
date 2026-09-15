@@ -275,12 +275,13 @@ export const HoloGauzeViewer: React.FC = () => {
 
     // Animation Loop
     let animId: number;
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer();
 
     const animate = () => {
       animId = requestAnimationFrame(animate);
-      const delta = clock.getDelta();
-      const elapsed = clock.getElapsedTime();
+      timer.update();
+      const delta = timer.getDelta();
+      const elapsed = timer.getElapsed();
 
       // Smooth idle rotation
       group.rotation.y += delta * 0.4;
